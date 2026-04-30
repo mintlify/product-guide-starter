@@ -1,0 +1,122 @@
+:root {
+  --pg-mark-muted: #78716c;
+  --pg-mark-ink: #0c0a09;
+  --pg-app-gutter: color-mix(in srgb, #fafaf9 85%, var(--pg-mark-muted) 15%);
+  --pg-border-warm: color-mix(in srgb, #e7e5e4 72%, var(--pg-mark-muted) 28%);
+}
+
+.dark {
+  --pg-app-gutter: color-mix(in srgb, var(--pg-mark-ink) 90%, var(--pg-mark-muted) 10%);
+  --pg-border-warm: rgb(255 255 255 / 0.11);
+}
+
+#sidebar {
+  background-color: var(--pg-app-gutter);
+}
+
+#content-area {
+  background-color: var(--pg-app-gutter) !important;
+}
+
+#sidebar .nav-dropdown-trigger {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding-left: 0.375rem;
+}
+
+#sidebar .nav-dropdown-trigger:hover {
+  background-color: rgb(0 0 0 / 0.04) !important;
+}
+
+.dark #sidebar .nav-dropdown-trigger:hover {
+  background-color: rgb(255 255 255 / 0.06) !important;
+}
+
+#sidebar .nav-dropdown-trigger .nav-dropdown-item-icon {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.nav-dropdown-content {
+  border-radius: 0 !important;
+}
+
+.nav-dropdown-content .nav-dropdown-item {
+  border-radius: 0 !important;
+}
+
+.nav-dropdown-content .nav-dropdown-item-icon {
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 0 !important;
+}
+
+.nav-dropdown-content .nav-dropdown-item-description {
+  display: none !important;
+}
+
+#sidebar .nav-anchor span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] {
+  color: #f97316 !important;
+  font-weight: 600 !important;
+}
+
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] span {
+  color: inherit !important;
+}
+
+body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
+  background-color: #f97316 !important;
+}
+
+.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] {
+  color: #fb923c !important;
+}
+
+.dark body:has([data-product-guide-index]) #sidebar a.nav-anchor[href='/'] svg {
+  background-color: #fb923c !important;
+}
+
+#content-area:has([data-product-guide-index]) > div:first-child {
+  margin-top: 1.5rem !important;
+  border: 1px solid var(--pg-border-warm);
+  border-radius: 0;
+  box-shadow:
+    0 1px 2px rgb(28 25 23 / 0.055),
+    0 12px 28px rgb(28 25 23 / 0.085);
+}
+
+.dark #content-area:has([data-product-guide-index]) > div:first-child {
+  border-color: var(--pg-border-warm);
+  box-shadow:
+    0 1px 2px rgb(0 0 0 / 0.48),
+    0 16px 40px rgb(0 0 0 / 0.42);
+}
+
+@media (min-width: 1024px) {
+  #content-area:has([data-product-guide-index]) > div:first-child {
+    margin-top: 1.75rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #content-area:has([data-product-guide-index]) {
+    padding-right: 2.5rem !important;
+  }
+}
